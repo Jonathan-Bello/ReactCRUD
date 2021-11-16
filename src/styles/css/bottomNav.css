@@ -1,0 +1,50 @@
+.bottom-nav {
+  display: flex;
+  background-color: var(--color-bg-dark);
+  /* Dejamos el elemento fijo, no importa si se hace scroll ahi seguiran */
+  position: fixed;
+  /* Para que siempre este al final de nuestro sitio web */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  z-index: var(--z-fixed);
+  border-top: 1px solid hsla(0, 0%, 100%, 0.308);
+}
+
+.bottom-nav-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+
+.bottom-nav-button {
+  --list-text-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-icon);
+}
+
+.bottom-nav-button:hover {
+  color: var(--color-white);
+  font-weight: 600;
+}
+
+.bottom-nav-icon {
+  fill: currentColor;
+}
+
+.bottomNav_listText {
+  width: var(--list-text-width);
+  overflow: hidden;
+}
+
+@media screen and (min-width: 1024px) {
+  .bottom-nav {
+    display: none;
+  }
+}

@@ -1,0 +1,48 @@
+/* --- --- CAROUSEL --- --- */
+.carousel__contenedor {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.carousel__anterior,
+.carousel__siguiente {
+  border: none;
+  cursor: pointer;
+  line-height: 30px;
+  text-align: center;
+  background: none;
+  color: var(--color-icon);
+  opacity: 80%;
+}
+
+.carousel__anterior:hover,
+.carousel__siguiente:hover {
+  color: var(--color-primary-light);
+}
+
+/* Quitar el  scroll predeterminado del navegador*/
+.carousel__lista {
+  overflow: hidden;
+}
+
+.carousel__elemento {
+  margin: 0 0.75rem;
+}
+
+/* Para los indicadores de en que página estamos */
+.carousel__indicadores .glider-dot {
+  display: block;
+  width: 30px;
+  height: 4px;
+  background: var(--color-icon);
+  opacity: 0.2;
+}
+
+.carousel__indicadores .glider-dot:hover {
+  opacity: 0.5;
+}
+
+.carousel__indicadores .glider-dot.active {
+  opacity: 1;
+}

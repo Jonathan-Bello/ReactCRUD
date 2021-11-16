@@ -1,0 +1,135 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"); */
+
+.grid-layout {
+  display: none;
+}
+
+@media screen and (min-width: 1020px) {
+  .grid-layout {
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    min-height: 100vh;
+    gap: 1rem;
+  }
+}
+
+.grid {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  display: grid;
+  align-items: center;
+  align-content: center;
+}
+
+.menu-item {
+  padding: 0 0.75rem;
+  position: relative;
+  cursor: pointer;
+  height: auto;
+}
+
+.menu-item .arrow-down {
+  width: 0.75rem;
+  height: 0.75rem;
+  display: inline-block;
+  transform: rotate(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.menu-item:hover .arrow_down {
+  transition: transform 0.2s ease-in-out;
+  transform: translateY(0) rotate(180deg);
+}
+/*
+.menu-item::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 1rem;
+    bottom: -1rem;
+    right: 0;
+    background-color: inherit;
+} */
+
+.menu-link {
+  color: var(--color-text);
+  text-transform: inherit;
+}
+
+/* .nav-link-child:hover {
+  color: red !important;
+} */
+
+.menu-dropdown {
+  position: fixed;
+  visibility: hidden;
+  width: 100%;
+  height: auto;
+  top: 3rem;
+  left: 0;
+  padding: 1rem;
+  transform-origin: top center;
+  background-color: var(--color-bg-light);
+  /* border-top: 1px solid var(--color-icon); */
+  border-bottom: 1px solid var(--color-bg-dark);
+  z-index: var(--z-front);
+  /* box-shadow: 0 0 2px var(--border-color); */
+  transition: transform 0.2s;
+}
+
+/* Despliega el menu */
+/* .menu-link:hover ~ .menu-dropdown {
+    transform: translateY(1rem);
+    visibility: visible;
+} */
+
+/* Despliega el menu */
+.menu-item:hover .menu-dropdown {
+  transform: translateY(1rem);
+  visibility: visible;
+}
+
+.grid-menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.menu-column {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.menu-column:hover .menu-title {
+  color: var(--color-primary);
+}
+
+.menu-column:hover .menu-description {
+  color: #242729;
+}
+
+.menu-item-child {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 0.5rem;
+}
+
+.menu-title {
+  color: var(--color-text);
+  font-size: var(--font-size-normal);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.menu-description {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+}

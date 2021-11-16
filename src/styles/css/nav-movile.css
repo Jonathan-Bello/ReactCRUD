@@ -1,0 +1,101 @@
+/* Diseño de la navegación en movil */
+@media screen and (max-width: 1024px) {
+  .main-menu-movile {
+    display: flex;
+    /* Centramos la lista de links del menu */
+    align-items: center;
+    justify-content: center;
+    /* Lo ponemos fijo */
+    position: fixed;
+    /* Lo colocamos al inicio de la pantalla */
+    top: 0;
+    left: 0;
+
+    /* Para que abarque toda la pantalla width y height */
+    width: 100%;
+    height: 100vh;
+
+    /* un fondo para ocultar el contenido de detras */
+    background: var(--color-bg-light);
+    /* background: blue; */
+
+    /* Para que el menu se ponga arriba del header y todo el contenido */
+    z-index: var(--z-off-canvas);
+
+    /* Para la animación, hacemos que sea pequeño al inico, y lo animamos para crecer */
+    /* el crecimiento */
+    transform: scale(0);
+    /* la duración */
+    transition: transform 0.25s;
+  }
+}
+
+.main-menu-movile .jam {
+  /* Para moverlo hasta la derecha de la pantalla */
+  margin-left: auto;
+  color: var(--color-icon);
+  /* Le damos el tamaño, como es un spam el icono usamos font-size para definir el tamaño */
+  font-size: 2.5rem;
+  /* Para que al pasar el mouse este se ponga como manita */
+  cursor: pointer;
+}
+
+/* reinicializamos el scale de la animación */
+@media screen and (max-width: 1024px) {
+  .main-menu-movile.active {
+    transform: initial;
+  }
+}
+
+/* Posicionamos el boton para cerrar */
+.main-menu-movile .jam-close {
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+}
+
+/* Centramos los li en movil y los hacemos un poco mas grandes */
+@media screen and (max-width: 1024px) {
+  .main-menu-movile a {
+    text-align: center;
+    font-size: var(--font-size-big);
+  }
+}
+
+.main-menu-movile-list {
+  padding: 0;
+  margin: 0;
+  width: 75%;
+}
+
+.main-menu-movile-item {
+  padding: 0.5rem;
+}
+
+.main-menu-movile-item:nth-last-child(2) {
+  margin-bottom: 4rem;
+}
+
+.main-menu-movile-link {
+  display: flex;
+  border-bottom: 1px solid var(--color-icon);
+  padding-bottom: 0.5rem;
+}
+
+.main-menu-movile-link .icon {
+  margin-right: 0.5rem;
+}
+
+.main-menu-movile-link:hover,
+.main-menu-movile-link:hover path {
+  color: var(--color-text);
+}
+
+/* -------------- */
+.avatar-img {
+  cursor: pointer;
+}
+
+.avatar-details p {
+  margin-bottom: 0;
+}

@@ -1,0 +1,84 @@
+/* Cards-scroll */
+.card-carousel-name p{
+  text-align: center;
+}
+
+/* Course card */
+.course-card-content {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text);
+  height: 8em;
+}
+
+.course-card-content h3 {
+  font-size: var(--font-size-big);
+  margin-bottom: 0.5rem;
+}
+
+.course-card-content p {
+  color: var(--color-icon);
+  font-size: var(--font-size-normal);
+}
+
+.course-card-footer {
+  background-color: var(--color-bg-dark);
+  font-size: var(--font-size-small);
+  flex-wrap: nowrap;
+}
+
+@media screen and (min-width: 1024px) {
+  .course-card-footer {
+    font-size: var(--font-size-smaller);
+  }
+  .course-card-content h3 {
+    font-size: var(--font-size-normal);
+  }
+
+  .course-card-content p {
+    color: var(--color-icon);
+    font-size: var(--font-size-small);
+  }
+}
+
+.course-card-type-score{
+  background-color: var(--color-bg-dark);
+  display: flex;
+  align-items: center;
+}
+
+.course-type {
+  background-color: var(--color-green-dark);
+  padding: 0.25em 0.5em;
+  font-size: var(--font-size-small);
+}
+
+.course-score {
+  margin: 0 0.75em;
+  font-size: var(--font-size-normal);
+}
+
+.fa-star {
+  color: var(--color-primary);
+  margin-right: 0em;
+}
+
+.course-card-imgprofe {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Card-progress */
+
+.card-progress-details {
+    background-color: var(--color-bg-dark);
+    display: flex;
+}
+
+.card-progress-course, .card-progress-porcentaje{
+    margin: 0;
+    font-size: var(--font-size-small);
+}
+
+.card-progress-porcentaje{
+    margin-left: auto;
+}

@@ -1,0 +1,26 @@
+.banner {
+  background-color: var(--color-bg-dark);
+}
+
+.banner-title {
+  color: var(--color-text);
+  font-size: var(--font-size-h1);
+}
+
+.banner-description {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-normal);
+}
+
+.banner-list {
+  padding: 0;
+}
+
+.banner-list-item {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-small);
+}
+
+.banner-title .s-mb-0 {
+  margin-bottom: 0;
+}

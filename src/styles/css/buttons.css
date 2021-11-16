@@ -1,0 +1,121 @@
+/* ----- BOTONES ----- */
+
+/* Boton principal */
+.button {
+  /* Para poder darle un padding */
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  /* Le damos el redondeado */
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--color-text-template);
+  background: var(--color);
+  border: 1px solid var(--color);
+
+  min-width: 5em;
+  font-size: var(--font-size-normal);
+  text-align: center;
+  /* margin-bottom: 0.6em; */
+}
+
+/* Para cuando el mouse se posicione encima del boton */
+.button:hover {
+  border: 1px solid var(--color-alt);
+  background: var(--color-alt);
+  color: var(--color-text-template);
+  text-decoration-line: none;
+}
+
+/* Nuestras variaciones de boton */
+/* Boton blanco */
+.button.white {
+  /* Cambiamos nuestras variables templates */
+  --color: var(--color-white);
+  --color-alt: var(--color-icon);
+  --color-text-template: var(--color-primary);
+}
+
+/* boton fantasma (con borde sin relleno) */
+.button.ghost {
+  --color-text-template: var(--color-primary);
+  background: transparent;
+}
+.button.ghost:hover {
+  --color-text-template: var(--color-white);
+  background: var(--color);
+}
+.button.ghost.white {
+  --color-text-template: var(--color-white);
+}
+.button.ghost.white:hover {
+  --color-text-template: var(--color-primary);
+  background: var(--color);
+}
+
+.button.red {
+  --color: var(--color-red);
+  --color-alt: var(--color-red-dark);
+  color: var(--color-white);
+}
+.button.blue {
+  --color: var(--color-blue);
+  --color-alt: var(--color-blue-dark);
+  color: var(--color-white);
+}
+.button.green {
+  --color: var(--color-green);
+  --color-alt: var(--color-green-dark);
+  color: var(--color-white);
+}
+
+.button.big {
+  font-size: var(--font-size-big);
+}
+
+.button.small {
+  font-size: var(--font-size-small);
+}
+
+.button.smaller {
+  padding: 0.25rem;
+  font-size: var(--font-size-smaller);
+}
+
+.button-icon {
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+}
+
+.button-icon .icon {
+  margin-right: 0.5em;
+  width: var(--font-size-big);
+  height: var(--font-size-big);
+}
+
+.button-icon .icon > path {
+  fill: var(--color-text-template);
+}
+
+.button-icon.small .icon {
+  width: var(--font-size-normal);
+  height: var(--font-size-normal);
+}
+
+.button-icon.big .icon {
+  width: var(--font-size-h3);
+  height: var(--font-size-h3);
+}
+
+.button.button-action {
+  display: inline-flex;
+  margin-bottom: 0;
+  padding: 0;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-smaller);
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  align-items: center;
+  justify-content: center;
+}

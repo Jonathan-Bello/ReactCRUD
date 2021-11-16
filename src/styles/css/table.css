@@ -1,0 +1,78 @@
+table {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: var(--font-size-normal);
+  border: 2px solid var(--color-bg-dark);
+  color: var(--color-icon);
+  table-layout: fixed;
+  border-collapse: collapse;
+  background: var(--color-bg-light);
+  min-width: 70%;
+}
+
+table td,
+table th {
+  padding: 0.8em;
+  border-bottom: 2px solid var(--color-bg-dark);
+  border-top: 2.5px solid var(--color-bg-dark);
+}
+
+table th {
+  background: var(--color-primary);
+  color: var(--color-white);
+  text-align: center;
+  border: 2px solid var(--color-primary-dark);
+  font-weight: normal;
+}
+
+table td {
+  min-width: 100px;
+  text-align: center;
+}
+
+.table-container {
+  overflow-x: auto;
+  position: relative;
+  table-layout: fixed;
+  margin-bottom: 2em;
+  min-width: 70%;
+}
+
+table tr:hover {
+  background: var(--color-bg-dark);
+}
+/* Color de la primer columna */
+/* table tr td:nth-child(1) {
+  background: var(--color-bg-dark);
+} */
+
+table th:first-child {
+  width: 8em;
+}
+
+table tr:hover td:first-child {
+  background: var(--color-primary-dark);
+  color: var(--color-white);
+}
+
+/* table tr:nth-child(1) td:nth-child(2) {
+  box-shadow: 0 -2.7em 0 -6px  var(--primary-color-alt), -6px -2.7em 0 -6px  var(--primary-color-alt);
+} */
+
+/*Para que la primera columna se quede fija*/
+table tr .fijo {
+  position: sticky;
+  left: 0;
+}
+
+/* .table-cursos {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1024px) {
+  .table-cursos {
+    display: flex;
+    flex-direction: row;
+  }
+} */

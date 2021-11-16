@@ -1,0 +1,56 @@
+.avatar-menu-desktop {
+    /* top: 4rem; */
+    background-color: var(--color-bg-light);
+    margin-top: 2.5rem;
+    margin-left: -9rem;
+    width: 12.5rem;
+    padding: 1rem 0.5rem 0rem;
+    font-size: var(--font-size-small);
+
+    transform-origin: top center;
+    z-index: var(--z-front);
+    transform: translateY(-1rem);
+    transition: transform 0.2s;
+    visibility: hidden;
+}
+
+.avatar-menu-desktop.active{
+    transform: translateY(1rem);
+    visibility: visible;
+}
+
+.main-menu-desktop-list {
+    padding: 0;
+    margin: 0;
+}
+
+.main-menu-desktop-item {
+    padding: 0.5rem;
+}
+
+.main-menu-desktop-item:nth-last-child(2) {
+    margin-bottom: 4rem;
+}
+
+.main-menu-desktop-item:nth-last-child(1) {
+    margin-bottom: 0rem;
+}
+
+.main-menu-desktop-link {
+    display: flex;
+    border-bottom: 1px solid var(--color-icon);
+    padding-bottom: 0.5rem;
+}
+
+.main-menu-desktop-link .icon {
+    margin-right: 0.5rem;
+    overflow: visible;
+}
+
+.main-menu-desktop-link:hover, .main-menu-desktop-link:hover path{
+    /* color: var(--color-primary);
+    fill: var(--color-primary); */
+    color: var(--color-white);
+    fill: var(--color-white);
+    font-weight: 600;
+}

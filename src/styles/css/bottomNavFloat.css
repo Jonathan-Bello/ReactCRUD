@@ -1,0 +1,72 @@
+.bottomNav {
+  /* Dejamos el elemento fijo, no importa si se hace scroll ahi seguiran */
+  position: fixed;
+  bottom: 4em;
+
+  /* Usamos nuestra variable, nos ahorramos problemas de desbordamiento o calcularlo con JavaScript  */
+  z-index: var(--z-tooltip);
+  /* position: absolute; */
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 2rem;
+  padding: 0.8rem 1.5rem;
+  /* box-shadow: 0 0 0.5rem var(--shadow-color); */
+  background-color: var(--color-bg-secondary);
+}
+
+.bottomNav_list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.bottomNav_listLink {
+  --list-text-width: 0;
+  display: flex;
+  border-radius: 1rem;
+  padding: 0.6rem;
+  color: var(--color-icon);
+}
+
+.bottomNav_listLink:hover {
+  color: #fff;
+  font-weight: 600;
+}
+
+.bottomNav_listIcon {
+  fill: currentColor;
+}
+
+.bottomNav_listText {
+  margin-left: 0.4rem;
+  width: var(--list-text-width);
+  overflow: hidden;
+}
+
+.bottomNav_listLink-blue {
+  --color: var(--color-icon);
+  --bg-color: var(--color-blue-light);
+}
+
+.bottomNav_listLink-green {
+  --color: var(--color-icon);
+  /* --color: var(--alt-green-color); */
+  --bg-color: var(--color-green);
+}
+
+.bottomNav_listLink-orange {
+  --color: var(--color-icon);
+  --bg-color: var(--color-primary);
+}
+
+.bottomNav_listLink-red {
+  --color: var(--color-icon);
+  /* --color: var(--alt-red-color); */
+  --bg-color: var(--color-red);
+}
+
+.bottomNav_listLink-active {
+  --list-text-width: auto;
+  color: var(--color);
+  background-color: var(--bg-color);
+}

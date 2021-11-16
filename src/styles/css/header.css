@@ -1,0 +1,109 @@
+.header {
+  /* display: flex; */
+  background-color: var(--color-bg-dark);
+  /* Dejamos el elemento fijo, no importa si se hace scroll ahi seguiran */
+  position: fixed;
+  /* Para que siempre este al inicio de nuestro sitio web */
+  top: 0;
+  /* Usamos nuestra variable, nos ahorramos problemas de desbordamiento o calcularlo con JavaScript  */
+  height: var(--header-height);
+  z-index: var(--z-fixed);
+}
+
+.nav-menu {
+  list-style: none;
+  padding-left: 0rem;
+  margin-bottom: 0;
+  flex-wrap: nowrap;
+  height: var(--header-height);
+}
+
+.nav-link {
+  font-size: var(--font-size-big);
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.nav-link:nth-last-child(1) {
+  margin-right: 0;
+}
+
+.nav-link:hover {
+  /* color: var(--color-text); */
+  color: #fff;
+  /* color: var(--color-primary); */
+  /* fill: var(--color-white); */
+  font-weight: 510;
+}
+
+@media screen and (max-width: 1230px) {
+  .nav-link {
+    font-size: var(--font-size-normal);
+    color: var(--color-text);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .nav-link {
+    font-size: var(--font-size-normal);
+    color: var(--color-text);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+}
+
+.avatar {
+  width: 2rem;
+  height: 2rem;
+  margin-left: auto;
+}
+
+.browser {
+  margin-bottom: 0;
+  margin-left: 1rem;
+}
+
+.input-search {
+  background-color: transparent;
+  color: var(--color-text);
+  text-indent: 0.5rem;
+  border: none;
+  outline: none;
+  height: 3rem;
+  width: 95%;
+}
+
+.input-search::placeholder {
+  color: var(--color-text);
+}
+
+.icon-search {
+  font-size: var(--font-size-big);
+  color: var(--color-icon);
+  cursor: pointer;
+}
+
+.avatar-img {
+  border-radius: 50%;
+}
+
+.logo-apoyaTec {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    padding: 0 4em;
+  }
+  .avatar {
+    width: 3rem;
+    height: 3rem;
+    margin-left: auto;
+  }
+
+  .browser {
+    margin-left: 0;
+    background-color: var(--color-bg-light);
+    border-radius: 0.25rem;
+  }
+}

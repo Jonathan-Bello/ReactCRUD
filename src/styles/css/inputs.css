@@ -1,0 +1,61 @@
+.input {
+  display: flex;
+  border: 1px solid var(--color-text-inputs);
+  height: 2.5em;
+  border-radius: var(--border-radius);
+  text-indent: 0.5em;
+  padding: 0.5em 0;
+}
+
+.input::placeholder {
+  color: var(--color-text-inputs);
+}
+
+.label-input {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-text-labels);
+  margin: 0.5rem 0;
+}
+
+.input-text {
+  padding: 0.5em 0;
+  height: max-content;
+}
+
+.input-file {
+  margin: 1.5rem 0;
+}
+
+.input-file input[type="file"] {
+  display: none;
+}
+
+.input.ghost {
+  /* appearance: none; */
+  background-color: transparent;
+  color: var(--color-icon);
+}
+
+.input.ghost option,.input.ghost optgroup {
+  background-color: var(--color-bg-main);
+  border-radius: 2rem;
+  border: 2px solid green;
+  color: var(--color-icon);
+}
+
+.input.ghost.dark {
+  /* appearance: none; */
+  background-color: var(--color-bg-dark);
+  color: var(--color-icon);
+}
+
+.input.ghost.dark option,.input.ghost.dark optgroup {
+  background-color: var(--color-bg-dark);
+  border-radius: 2rem;
+  color: var(--color-icon);
+}
+
+.input-tamanio {
+  width: 500px;
+}
